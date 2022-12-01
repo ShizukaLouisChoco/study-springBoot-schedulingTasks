@@ -61,3 +61,14 @@ Nothing
     The main() method uses Spring Boot's SpringApplication.run()
     The @EnableScheduling annotation ensures that a background task executor is created. without it, nothing gets scheduled
 
+4) Build an executable JAR
+    You can run the application form the command line with Gradle or Maven.
+    Logging output is displayed, and you can see from the logs that it is on a background thread.
+    You should see your scheduled task fire every five seconds
+    The following listing shows typical output:
+    ...
+    2019-10-02 12:07:35.659  INFO 28617 --- [   scheduling-1] c.e.schedulingtasks.ScheduledTasks       : The time is now 12:07:35
+    2019-10-02 12:07:40.659  INFO 28617 --- [   scheduling-1] c.e.schedulingtasks.ScheduledTasks       : The time is now 12:07:40
+    2019-10-02 12:07:45.659  INFO 28617 --- [   scheduling-1] c.e.schedulingtasks.ScheduledTasks       : The time is now 12:07:45
+    2019-10-02 12:07:50.657  INFO 28617 --- [   scheduling-1] c.e.schedulingtasks.ScheduledTasks       : The time is now 12:07:50
+    ...
