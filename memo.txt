@@ -42,3 +42,11 @@ Nothing
     	useJUnitPlatform()
     }
 
+2) Create a Scheduled Task
+    Now that you have set up your project, you can create a scheduled task.
+    The following listing (in ScheduledTasks.class) shows how to do so
+
+    The Scheduled annotation defines when a particular method runs
+    *This example uses fixedRate, which specifies the interval between method invocations, measured from the start time of each invocation/
+     There are other options, such as fixedDelay, which specifies the interval between invocations measured from the completion of the task
+     You can also use @Scheduled(cron=". . .") expressions for more sophisticated task scheduling
