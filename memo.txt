@@ -72,3 +72,7 @@ Nothing
     2019-10-02 12:07:45.659  INFO 28617 --- [   scheduling-1] c.e.schedulingtasks.ScheduledTasks       : The time is now 12:07:45
     2019-10-02 12:07:50.657  INFO 28617 --- [   scheduling-1] c.e.schedulingtasks.ScheduledTasks       : The time is now 12:07:50
     ...
+
+5) Summary
+    Congratulations! You created an application with a scheduled task
+    Also, this technique works in any type of application
