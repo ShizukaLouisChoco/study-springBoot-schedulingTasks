@@ -1,0 +1,44 @@
+What you will build
+You will build an application that prints out the current time every five seconds by using Spring's @Scheduled annotation
+
+Initial dependency:
+Nothing
+
+1) Adding the awaitility dependency
+    The tests in class ScheduledTasksTest.java require the awaitility library.
+    *Later version of the awaitility library do not work for this test, so you have to specify version 3.1.2.
+    To add the awaitility library to Maven, add the following dependency:
+    <dependency>
+      <groupId>org.awaitility</groupId>
+      <artifactId>awaitility</artifactId>
+      <version>3.1.2</version>
+      <scope>test</scope>
+    </dependency>
+    To add the awaitility library to Gradle, add the following dependency:
+    testImplementation 'org.awaitility:awaitility:3.1.2'
+    The following listing shows the finished build.gradle file:
+
+    plugins {
+    	id 'org.springframework.boot' version '2.7.1'
+    	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    	id 'java'
+    }
+
+    group = 'com.example'
+    version = '0.0.1-SNAPSHOT'
+    sourceCompatibility = '1.8'
+
+    repositories {
+    	mavenCentral()
+    }
+
+    dependencies {
+    	implementation 'org.springframework.boot:spring-boot-starter'
+    	testImplementation 'org.awaitility:awaitility:3.1.2'
+    	testImplementation('org.springframework.boot:spring-boot-starter-test')
+    }
+
+    test {
+    	useJUnitPlatform()
+    }
+
