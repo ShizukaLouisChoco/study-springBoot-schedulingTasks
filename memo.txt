@@ -50,3 +50,14 @@ Nothing
     *This example uses fixedRate, which specifies the interval between method invocations, measured from the start time of each invocation/
      There are other options, such as fixedDelay, which specifies the interval between invocations measured from the completion of the task
      You can also use @Scheduled(cron=". . .") expressions for more sophisticated task scheduling
+
+3) Enable Scheduling
+    Although scheduled tasks can be embedded in web applications and WAR files, the simpler approach(shown in the next listing) creates a standalone application
+    To do so, package everything in a single, executable JAR file, driven by a good old java main() method.
+    The following listing(from SchedulingTasksApplication.java) shows the application class
+
+    @SpringBootApplication is a convenience annotation that adds all of the following:
+        @Configuration, @EnableAutoConfiguration, @ComponentScan
+    The main() method uses Spring Boot's SpringApplication.run()
+    The @EnableScheduling annotation ensures that a background task executor is created. without it, nothing gets scheduled
+
